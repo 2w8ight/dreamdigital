@@ -1,0 +1,141 @@
+html {
+  font-size: 10px;
+  height: 100%;
+  overflow-x: hidden;
+  //font-family: 'Space Grotesk', sans-serif;
+  //font-family: 'Inter', sans-serif;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 835px) {
+  * {
+    cursor: none !important;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  line-height: 0;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+}
+
+input {
+  outline: none;
+}
+
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.title-11 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.65px;
+  text-transform: uppercase;
+}
+
+.title-22 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.title-18 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.text-18 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.text-14 {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.text-13 {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.container-big {
+  max-width: 1440px;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin: 0 auto;
+}
+
+.d-none {
+  display: none;
+}
+
+#section_spacer {
+  height: 1px;
+  background: #000000;
+}
+
+.turquoise {
+  background-color: #d3eefe;
+}
+
+.yellow {
+  background-color: #fef999;
+}
+
+.violet {
+  background-color: #8e59fe;
+}

@@ -1,0 +1,17 @@
+// global
+@import "global/variable";
+@import "global/fonts";
+@import "global/base";
+
+// components
+@import "components/header";
+@import "components/footer";
+
+// pages
+@import "pages/404";
+
+//blocks
+@import "blocks/banner";
+@import "blocks/partners";
+@import "blocks/how_d_d_works";
+@import "blocks/featured_services";
