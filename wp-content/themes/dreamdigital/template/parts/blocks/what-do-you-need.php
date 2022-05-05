@@ -14,7 +14,7 @@ $blocks = get( $fields, 'blocks' );
                         <div class="img_wrap">
                             <img src="<?php echo wp_get_attachment_image_url( $item['image'], 'full' ); ?>" alt="image">
                         </div>
-                        <p class="title-18 item_title"><?php echo $item['title']; ?></p>
+                        <p class="title-14 item_title"><?php echo $item['title']; ?></p>
                     </div>
 				<?php }
 			} ?>

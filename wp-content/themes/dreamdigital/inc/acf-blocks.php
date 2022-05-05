@@ -11,6 +11,8 @@ function acf_init_block_types() {
 			'featured-services'  => 'Featured services',
 			'what-do-you-need'   => 'What do you need',
 			'user-reviews-block' => 'User reviews block',
+			'faq-with-title'     => 'FAQ with Title',
+			'try-d-d'            => 'Try Dream Digital',
 		];
 
 		foreach ( $blocks as $slug => $title ) {

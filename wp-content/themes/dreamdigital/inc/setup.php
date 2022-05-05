@@ -39,6 +39,24 @@ function theme_register_nav_menu() {
 
 add_theme_support( 'custom-logo' );
 
+if ( function_exists( 'acf_add_options_page' ) ) {
+
+	acf_add_options_page( array(
+		'page_title' => 'Theme General Settings',
+		'menu_title' => 'Theme Settings',
+		'menu_slug'  => 'theme-general-settings',
+		'capability' => 'edit_posts',
+		'redirect'   => false
+	) );
+
+	acf_add_options_sub_page( array(
+		'page_title'  => 'Theme Footer Settings',
+		'menu_title'  => 'Footer',
+		'parent_slug' => 'theme-general-settings',
+	) );
+
+}
+
 add_action( 'init', 'register_reviews_post_type' );
 function register_reviews_post_type() {
 	$labels = array(
@@ -63,6 +81,33 @@ function register_reviews_post_type() {
 	);
 
 	register_post_type( 'reviews', $args );
+}
+
+add_action( 'init', 'register_faq_post_type' );
+function register_faq_post_type() {
+	$labels = array(
+		'name'          => __( 'FAQ', 'dreamdigital' ),
+		'singular_name' => __( 'FAQ', 'dreamdigital' ),
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'faq' ),
+		'capability_type'    => 'post',
+		'has_archive'        => false,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'menu_icon'          => 'dashicons-admin-comments',
+		'supports'           => array( 'title', 'editor' ),
+		'taxonomies'         => array( 'category' ),
+	);
+
+	register_post_type( 'faq', $args );
 }
 
 add_action( 'admin_init', function () {

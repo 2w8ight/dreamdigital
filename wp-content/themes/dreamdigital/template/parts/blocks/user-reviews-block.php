@@ -21,12 +21,12 @@ $reviews = get( $fields, 'reviews_block' );
 							}
 							?>
                         </div>
-                        <div><?php echo $item->post_content; ?></div>
-                        <div>
+                        <div class="item_desc text-13"><?php echo $item->post_content; ?></div>
+                        <div class="item_info">
                             <img src="<?php echo get_the_post_thumbnail_url( $item->ID, 'full' ) ?>" alt="avatar">
-                            <div>
-                                <p><?php echo $item->post_title; ?></p>
-                                <p><?php echo get_field( 'position', $item->ID ); ?></p>
+                            <div class="item_texts">
+                                <p class="item_name text-12"><?php echo $item->post_title; ?></p>
+                                <p class="item_position text-10"><?php echo get_field( 'position', $item->ID ); ?></p>
                             </div>
                         </div>
                     </div>
