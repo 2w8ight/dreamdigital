@@ -110,6 +110,57 @@ function register_faq_post_type() {
 	register_post_type( 'faq', $args );
 }
 
+add_action( 'init', 'register_blog_post_type' );
+function register_blog_post_type() {
+	$labels = array(
+		'name'          => __( 'Blog', 'dreamdigital' ),
+		'singular_name' => __( 'Blog', 'dreamdigital' ),
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'blog' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'menu_icon'          => 'dashicons-admin-comments',
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+	);
+
+	register_post_type( 'blog', $args );
+}
+
+// ************* Remove default Posts type since no blog *************
+
+// Remove side menu
+add_action( 'admin_menu', 'remove_default_post_type' );
+
+function remove_default_post_type() {
+	remove_menu_page( 'edit.php' );
+}
+
+// Remove +New post in top Admin Menu Bar
+add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
+
+function remove_default_post_type_menu_bar( $wp_admin_bar ) {
+	$wp_admin_bar->remove_node( 'new-post' );
+}
+
+// Remove Quick Draft Dashboard Widget
+add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
+
+function remove_draft_widget() {
+	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+}
+
+// End remove post type
+
 add_action( 'admin_init', function () {
 	global $pagenow;
 	if ( $pagenow === 'edit-comments.php' ) {

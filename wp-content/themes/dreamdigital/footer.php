@@ -21,7 +21,7 @@ $socials    = get( $fields, 'socials_footer' );
 				} ?>
                 <div class="footer_menu">
                     <p class="item_title title-14"><?php echo $menu_title; ?></p>
-		            <?php wp_nav_menu( [ 'theme_location' => 'footer' ] ); ?>
+					<?php wp_nav_menu( [ 'theme_location' => 'footer' ] ); ?>
                 </div>
             </div>
         </div>
