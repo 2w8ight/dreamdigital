@@ -136,6 +136,16 @@ function register_blog_post_type() {
 	register_post_type( 'blog', $args );
 }
 
+add_filter( 'woocommerce_get_price_html', 'changeFreePriceNotice', 10, 2 );
+
+function changeFreePriceNotice( $price, $product ) {
+	if ( $price == wc_price( 0.00 ) ) {
+		return 'FREE';
+	} else {
+		return $price;
+	}
+}
+
 // ************* Remove default Posts type since no blog *************
 
 // Remove side menu
