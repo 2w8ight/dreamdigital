@@ -40,4 +40,43 @@ $(document).ready(function () {
             }
         })
     })
+
+    $('#book_demo').click(function (e) {
+        e.preventDefault()
+        $('.book_demo').fadeIn(200)
+    })
+    $(document).mouseup(function (e) {
+        var div = $(".b_a_d_wrap")
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $('.book_demo').fadeOut(200)
+        }
+    });
+    $(document).on('keyup', function (e) {
+        if (e.key == "Escape") {
+            $('.book_demo').fadeOut(200)
+        }
+    });
+
+    $('.prod_btn_open').click(function (e) {
+        e.preventDefault()
+        var prod_id = $(this).data('prod-id'),
+            data = {
+                'action': 'get_prod_info',
+                'prod_id': prod_id
+            };
+        $.post(myAjax.ajaxurl, data, function (response) {
+            $('.product_more_details').fadeIn(200).html(response)
+        });
+    })
+    $(document).mouseup(function (e) {
+        var div = $(".p_m_d_wrap")
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $('.product_more_details').fadeOut(200)
+        }
+    });
+    $(document).on('keyup', function (e) {
+        if (e.key == "Escape") {
+            $('.product_more_details').fadeOut(200)
+        }
+    });
 });

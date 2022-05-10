@@ -5,6 +5,7 @@ function wp_enqueue() {
 	wp_enqueue_style( 'app', get_template_directory_uri() . '/dest/css/app.css' );
 	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/dest/css/swiper-bundle.min.css' );
 	wp_enqueue_script( 'app', get_template_directory_uri() . '/dest/js/app.js', array( 'jquery' ) );
+	wp_localize_script( 'app', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/dest/js/swiper-bundle.min.js', array( 'jquery' ) );
 }
 
@@ -108,6 +109,32 @@ function register_faq_post_type() {
 	);
 
 	register_post_type( 'faq', $args );
+}
+
+add_action( 'init', 'register_instructors_post_type' );
+function register_instructors_post_type() {
+	$labels = array(
+		'name'          => __( 'Instructors', 'dreamdigital' ),
+		'singular_name' => __( 'Instructor', 'dreamdigital' ),
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'instructor' ),
+		'capability_type'    => 'post',
+		'has_archive'        => false,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'menu_icon'          => 'dashicons-admin-comments',
+		'supports'           => array( 'title', 'excerpt', 'thumbnail' ),
+	);
+
+	register_post_type( 'instructor', $args );
 }
 
 add_action( 'init', 'register_blog_post_type' );

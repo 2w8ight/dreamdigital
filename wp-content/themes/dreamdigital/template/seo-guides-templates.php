@@ -3,12 +3,11 @@
  * Template Name: SEO Guides & Templates
  * */
 get_header();
+global $post;
 $fields                  = get_fields();
 $show_try_d_d_today      = get_field( 'show_try_d_d_today' );
 $options                 = get_fields( 'option' );
-$try_dream_digital_today = get( $options, 'try_dream_digital_today' );
-?>
-
+$try_dream_digital_today = get( $options, 'try_dream_digital_today' ); ?>
     <main class="seo-g-t-page">
         <section class="banner">
             <div class="banner_wrap container">
@@ -18,14 +17,10 @@ $try_dream_digital_today = get( $options, 'try_dream_digital_today' );
         </section>
         <div class="seo_g_t_page_wrap">
             <div class="seo_g_t_content">
-				<?php
-				while ( have_posts() ) :
+				<?php while ( have_posts() ) :
 					the_post();
-
 					the_content();
-
-				endwhile;
-				?>
+				endwhile; ?>
 				<?php if ( $show_try_d_d_today && $try_dream_digital_today ) { ?>
                     <section id="try_d_d">
                         <div class="try_d_d_wrap container">
@@ -92,7 +87,8 @@ $try_dream_digital_today = get( $options, 'try_dream_digital_today' );
 									}
 								} ?>
                                 <div class="seo_g_t_products_item <?php echo $back_color . ' ' . $content_color . ' ' . $coming_soon; ?><?php echo ( $key > 2 ) ? ' hide_prod' : ''; ?>"
-                                     data-term-slug="<?php echo $term->slug; ?>">
+                                     data-term-slug="<?php echo $term->slug; ?>"
+                                     data-prod-id="<?php echo $post->ID; ?>">
                                     <div class="item_info">
                                         <img src="<?php echo wp_get_attachment_image_url( $product->image_id ); ?>"
                                              class="img_wrap"
@@ -106,14 +102,14 @@ $try_dream_digital_today = get( $options, 'try_dream_digital_today' );
                                     <div class="item_price_btn">
                                         <p class="text-18 item_price">
                                             <small class="title-12"><?php echo __( 'price', 'dreamdigital' ); ?></small><br>
-											<?php if ( $product->get_price() ) {
+											<?php if ( $product->get_price() != '' ) {
 												echo $product->get_price_html();
 											} else {
 												echo __( 'TBC', 'dreamdigital' );
 											} ?>
                                         </p>
-                                        <a href="<?php echo home_url( '/checkout/?add-to-cart=' . $post->ID ); ?>"
-                                           class="title-14 item_btn"><?php echo __( 'More details', 'dreamdigital' ); ?></a>
+                                        <button class="title-14 item_btn prod_btn_open"
+                                                data-prod-id="<?php echo $post->ID; ?>"><?php echo __( 'More details', 'dreamdigital' ); ?></button>
                                     </div>
                                 </div>
 							<?php }
@@ -121,8 +117,7 @@ $try_dream_digital_today = get( $options, 'try_dream_digital_today' );
 					} ?>
                 </div>
             </div>
+            <div class="product_more_details"></div>
         </div>
     </main>
-
-<?php
-get_footer();
+<?php get_footer();

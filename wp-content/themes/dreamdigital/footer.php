@@ -1,11 +1,31 @@
 <?php
-$fields     = get_fields( 'option' );
-$logo       = wp_get_attachment_image_url( get( $fields, 'logo_footer' ), 'full' );
-$addresses  = get( $fields, 'addresses_footer' );
-$menu_title = get( $fields, 'menu_title_footer' );
-$info       = get( $fields, 'info_footer' );
-$socials    = get( $fields, 'socials_footer' );
+$fields                = get_fields( 'option' );
+$logo                  = wp_get_attachment_image_url( get( $fields, 'logo_footer' ), 'full' );
+$addresses             = get( $fields, 'addresses_footer' );
+$menu_title            = get( $fields, 'menu_title_footer' );
+$info                  = get( $fields, 'info_footer' );
+$socials               = get( $fields, 'socials_footer' );
+$book_demo_image       = wp_get_attachment_image_url( get( $fields, 'book_demo.image' ), 'full' );
+$book_demo_pre_title   = get( $fields, 'book_demo.pre_title' );
+$book_demo_title       = get( $fields, 'book_demo.title' );
+$book_demo_description = get( $fields, 'book_demo.description' );
+$book_demo_form        = get( $fields, 'book_demo.form' );
 ?>
+<div class="book_demo book_a_demo_form">
+    <div class="b_a_d_content">
+        <div class="b_a_d_wrap container">
+            <div class="b_a_d_left">
+                <img src="<?php echo $book_demo_image; ?>" alt="image">
+            </div>
+            <div class="b_a_d_right">
+                <p class="pre_title title-14"><?php echo $book_demo_pre_title; ?></p>
+                <p class="title title-40"><?php echo $book_demo_title; ?></p>
+                <p class="desc text-15"><?php echo $book_demo_description; ?></p>
+				<?php echo do_shortcode( '[wpforms id="' . $book_demo_form . '"]' ) ?>
+            </div>
+        </div>
+    </div>
+</div>
 <footer id="footer">
     <div class="footer_wrap container">
         <div class="footer_top">
