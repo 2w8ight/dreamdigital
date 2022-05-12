@@ -157,6 +157,7 @@ function register_blog_post_type() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'menu_icon'          => 'dashicons-admin-comments',
+		'show_in_rest'       => true,
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
 	);
 

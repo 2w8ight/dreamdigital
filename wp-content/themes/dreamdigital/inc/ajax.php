@@ -64,7 +64,7 @@ function get_prod_info() {
                     <div class="p_m_d_instructor_info">
                         <p class="position title-8"><?php echo __( 'course instructor', 'dreamdigital' ); ?></p>
                         <p class="name title-16"><?php echo $instructor->post_title; ?></p>
-                        <p class="excerpt text-11"><?php echo $instructor->post_excerpt; ?></p>
+                        <p class="excerpt text-11"><?php echo get_field( 'short_excerpt', $instructor->ID ); ?></p>
                     </div>
                 </div>
             </div>

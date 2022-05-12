@@ -1,5 +1,18 @@
 #featured_services {
+  &.yellow {
+    background-color: #fffdea;
+  }
+
+  &.white {
+    background-color: #ffffff;
+  }
+
   .featured_services_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 61px;
     padding-bottom: 75px;
 
@@ -12,7 +25,8 @@
     .featured_services_content {
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 30px;
 
       .featured_services_item {
         width: calc(100% / 3 - 60px / 3);
@@ -92,6 +106,14 @@
           border: 1px solid;
         }
       }
+    }
+
+    .featured_services_btn {
+      border-radius: 4px;
+      background-color: #8e59fe;
+      margin-top: 35px;
+      color: #ffffff;
+      padding: 10px 15px;
     }
   }
 }

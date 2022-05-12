@@ -1,0 +1,29 @@
+#link_building {
+  background-color: #8e59fe;
+
+  .link_building_wrap {
+    display: flex;
+    align-items: center;
+    padding-top: 66px;
+    padding-bottom: 43px;
+
+    .link_building_info {
+      margin-right: 49px;
+
+      .pre_title {
+        text-transform: uppercase;
+        color: #fef999;
+        margin-bottom: 7px;
+      }
+
+      .title {
+        color: #ffffff;
+      }
+    }
+
+    .link_building_img {
+      max-width: 402px;
+      object-fit: contain;
+    }
+  }
+}

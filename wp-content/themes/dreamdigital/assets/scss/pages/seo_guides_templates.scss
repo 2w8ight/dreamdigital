@@ -13,6 +13,7 @@
 
       img {
         margin-top: 8px;
+        margin-right: 111px;
       }
     }
   }
@@ -318,11 +319,13 @@
               img {
                 height: 118px;
                 object-fit: contain;
-                margin-top: 9px;
-                margin-right: 25px;
+                margin: auto auto 0 0;
+                padding-top: 9px;
               }
 
               .p_m_d_instructor_info {
+                padding: 25px;
+
                 .position {
                   text-transform: uppercase;
                   line-height: normal;

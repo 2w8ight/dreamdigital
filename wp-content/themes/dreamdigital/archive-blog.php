@@ -15,14 +15,14 @@ $try_dream_digital_today = get( $options, 'try_dream_digital_today' );
             </section>
             <section class="blogs container">
 				<?php while ( have_posts() ) : the_post(); ?>
-                    <div class="blogs_item">
+                    <a href="<?php the_permalink(); ?>" class="blogs_item">
                         <img src="<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'full' ) ?>"
                              alt="blog">
                         <div class="blog_info">
                             <p class="blog_title title-18"><?php the_title(); ?></p>
                             <div class="blog_excerpt text-13"><?php the_excerpt(); ?></div>
                         </div>
-                    </div>
+                    </a>
 				<?php endwhile; ?>
             </section>
         </div>

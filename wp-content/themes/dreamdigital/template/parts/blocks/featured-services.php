@@ -1,10 +1,12 @@
 <?php
-$fields   = get_fields();
-$title    = get( $fields, 'title' );
-$btn_text = get( $fields, 'buttons_text' );
-$products = get( $fields, 'packages' );
+$fields        = get_fields();
+$title         = get( $fields, 'title' );
+$btn_text      = get( $fields, 'buttons_text' );
+$btn           = get( $fields, 'button' );
+$products      = get( $fields, 'packages' );
+$section_color = get( $fields, 'background_color' );
 ?>
-<section id="featured_services">
+<section id="featured_services" class="<?php echo $section_color; ?>">
     <div class="featured_services_wrap container">
         <h2><?php echo $title; ?></h2>
         <div class="featured_services_content">
@@ -28,5 +30,8 @@ $products = get( $fields, 'packages' );
 				<?php }
 			} ?>
         </div>
+		<?php if ( $btn ) {
+			echo '<a href="' . $btn['url'] . '" class="featured_services_btn title-13" target="' . $btn['target'] . '">' . $btn['title'] . '</a>';
+		} ?>
     </div>
 </section>

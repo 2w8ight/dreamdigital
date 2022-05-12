@@ -79,4 +79,14 @@ $(document).ready(function () {
             $('.product_more_details').fadeOut(200)
         }
     });
+
+    $('#share_copy').click(function () {
+        var dummy = document.createElement('input'),
+            text = window.location.href;
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+    })
 });

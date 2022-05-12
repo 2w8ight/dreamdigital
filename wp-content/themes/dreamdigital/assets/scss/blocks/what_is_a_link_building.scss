@@ -1,0 +1,36 @@
+#what_is_a_link_building {
+  .what_i_a_l_b_wrap {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 100px;
+    padding-bottom: 120px;
+
+    .what_i_a_l_b_img {
+      max-width: 413px;
+      object-fit: contain;
+      margin-right: 77px;
+    }
+
+    .what_i_a_l_b_info {
+      margin-top: 14px;
+
+      .pre_title {
+        color: #8e59fe;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+      }
+
+      .title {
+
+      }
+
+      .desc {
+        p {
+          &:not(:last-of-type) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
