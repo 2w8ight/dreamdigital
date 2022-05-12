@@ -1,0 +1,33 @@
+.error-page {
+  height: 100vh;
+  background-color: #8e59fe;
+
+  .error_wrap {
+    height: 100%;
+
+    .not-found {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        color: #ffffff;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 42px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+    }
+  }
+}

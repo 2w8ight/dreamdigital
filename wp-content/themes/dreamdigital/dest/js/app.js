@@ -89,4 +89,12 @@ $(document).ready(function () {
         document.execCommand('copy');
         document.body.removeChild(dummy);
     })
+
+    var window_h = $(window).outerHeight(),
+        header_h = $('header').outerHeight(),
+        footer_h = $('footer').outerHeight()
+    console.log(window_h)
+    console.log(header_h)
+    console.log(footer_h)
+    $('.error-page').css('height', window_h - header_h - footer_h)
 });
