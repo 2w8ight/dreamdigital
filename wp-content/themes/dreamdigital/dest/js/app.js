@@ -88,7 +88,8 @@ $(document).ready(function () {
         })
     }, false);
 
-    $('#share_copy').click(function () {
+    $('#share_copy').click(function (e) {
+        e.preventDefault()
         var dummy = document.createElement('input'),
             text = window.location.href;
         document.body.appendChild(dummy);
@@ -96,6 +97,7 @@ $(document).ready(function () {
         dummy.select();
         document.execCommand('copy');
         document.body.removeChild(dummy);
+        $(this).css('opacity', '.4')
     })
 
     $('.header_menu_btn').click(function (e) {
