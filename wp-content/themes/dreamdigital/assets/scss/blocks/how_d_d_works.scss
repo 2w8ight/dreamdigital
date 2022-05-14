@@ -2,6 +2,14 @@
   .how_d_d_works_wrap {
     padding-top: 79px;
     padding-bottom: 70px;
+    @media (max-width: 992px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
 
     h2 {
       text-align: center;
@@ -12,6 +20,10 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      @media (max-width: 992px) {
+        flex-direction: column-reverse;
+        gap: 30px;
+      }
 
       .how_d_d_works_item {
         width: calc(100% / 3 - 64px / 3);
@@ -19,6 +31,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @media (max-width: 992px) {
+          width: 100%;
+        }
 
         .img_wrap {
           height: 166px;

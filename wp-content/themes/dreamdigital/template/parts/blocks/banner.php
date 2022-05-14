@@ -13,9 +13,9 @@ $image       = wp_get_attachment_image_url( get( $fields, 'image' ), 'full' );
             <p class="text-14"><?php echo $description; ?></p>
             <div class="banner_buttons">
                 <a href="<?php echo $btn_light['url']; ?>"
-                   target="<?php echo $btn_light['target']; ?>" class="banner_btn_light"><?php echo $btn_light['title']; ?></a>
-                <a href="<?php echo $btn_dark['url']; ?>"
-                   target="<?php echo $btn_dark['target']; ?>" class="banner_btn_dark"><?php echo $btn_dark['title']; ?></a>
+                   target="<?php echo $btn_light['target']; ?>"
+                   class="banner_btn_light"><?php echo $btn_light['title']; ?></a>
+                <button class="banner_btn_dark book_demo_btn"><?php echo $btn_dark['title']; ?></button>
             </div>
         </div>
         <img src="<?php echo $image; ?>" class="banner_img" alt="image">

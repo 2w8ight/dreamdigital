@@ -4,6 +4,14 @@
   .whitelabel_link_building_wrap {
     padding-top: 69px;
     padding-bottom: 69px;
+    @media (max-width: 992px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
 
     .whitelabel_link_building_content {
       display: flex;
@@ -20,22 +28,44 @@
       .w_l_b_desc {
         text-align: center;
         margin-bottom: 40px;
+        @media (max-width: 992px) {
+          margin-bottom: 30px;
+          br {
+            display: none;
+          }
+        }
       }
 
       .w_l_b_short_desc {
+        text-align: center;
         margin-bottom: 40px;
+        @media (max-width: 767px) {
+          margin-bottom: 20px;
+        }
       }
 
       .w_l_b_blocks {
         display: flex;
         gap: 30px;
         margin-bottom: 41px;
+        @media (max-width: 767px) {
+          flex-wrap: wrap;
+          gap: 15px;
+          margin-bottom: 30px;
+        }
 
         .w_l_b_blocks_item {
           width: calc(50% - 15px);
           border-radius: 14px;
           background-color: #d3eefe;
           padding: 36px 41px 53px 37px;
+          @media (max-width: 992px) {
+            padding: 25px;
+          }
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+
 
           .w_l_b_blocks_item_info {
             display: flex;
@@ -48,6 +78,10 @@
               object-fit: cover;
               border-radius: 100%;
               margin-right: 13px;
+              @media (max-width: 992px) {
+                width: 61px;
+                height: 61px;
+              }
             }
           }
 
@@ -62,11 +96,19 @@
       .o_p_title {
         text-align: center;
         margin-bottom: 40px;
+        @media (max-width: 767px) {
+          margin-bottom: 30px;
+        }
       }
 
       .o_p_blocks {
         display: flex;
         gap: 40px;
+        @media (max-width: 767px) {
+          flex-wrap: wrap;
+          row-gap: 20px;
+          column-gap: 0;
+        }
 
         .o_p_blocks_item {
           width: calc(25% - 30px);
@@ -74,6 +116,9 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          @media (max-width: 767px) {
+            width: 50%;
+          }
 
           img {
             width: 101px;

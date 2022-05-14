@@ -3,17 +3,31 @@
     max-width: 985px;
     padding-top: 60px;
     padding-bottom: 59px;
+    @media (max-width: 992px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
 
     h2 {
       color: #000000;
       text-align: center;
       margin-bottom: 62px;
+      @media (max-width: 767px) {
+        margin-bottom: 30px;
+      }
     }
 
     .faq_w_title_content {
       display: flex;
       flex-direction: column;
       margin-bottom: 50px;
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
 
       .faq_w_title_item {
         padding: 9px 0 12px;
@@ -34,7 +48,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 10px;
+          gap: 20px;
           color: #000000;
           transition: .2s ease-in-out;
 

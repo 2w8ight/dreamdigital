@@ -8,9 +8,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: 992px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
 
     .how_is_a_link_b_work_info {
       margin-bottom: 85px;
+      @media (max-width: 992px) {
+        margin-bottom: 30px;
+      }
 
       .title {
         text-align: center;
@@ -28,10 +39,20 @@
       .how_is_a_link_b_work_item {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
         width: 100%;
+        @media (max-width: 767px) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
 
         .desc {
           max-width: 540px;
+          @media (max-width: 992px) {
+            max-width: 100%;
+          }
+
 
           p {
             &:not(:last-of-type) {
@@ -43,21 +64,38 @@
 
       .block_1 {
         align-items: flex-start;
+        @media (max-width: 767px) {
+          flex-direction: column-reverse;
+        }
 
         img {
           max-width: 316px;
           object-fit: contain;
           margin-right: 124px;
+          @media (max-width: 992px) {
+            max-width: 150px;
+            margin-right: 0;
+          }
         }
       }
 
       .block_2 {
         align-items: flex-end;
+        @media (max-width: 992px) {
+          margin-top: 20px;
+        }
+        @media (max-width: 767px) {
+          align-items: flex-start;
+        }
 
         img {
           max-width: 423px;
           object-fit: contain;
           margin-left: 49px;
+          @media (max-width: 992px) {
+            max-width: 200px;
+            margin-left: 0;
+          }
         }
       }
     }

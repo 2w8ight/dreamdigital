@@ -1,5 +1,8 @@
 .error-page {
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   background-color: #8e59fe;
 
   .error_wrap {
@@ -11,6 +14,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 50px 0;
 
       h1 {
         color: #ffffff;
@@ -19,6 +23,12 @@
         font-weight: 700;
         line-height: 42px;
         margin-bottom: 20px;
+        text-align: center;
+        @media (max-width: 767px) {
+          font-size: 36px;
+          line-height: 40px;
+          margin-bottom: 15px;
+        }
       }
 
       p {
@@ -27,6 +37,7 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
+        text-align: center;
       }
     }
   }

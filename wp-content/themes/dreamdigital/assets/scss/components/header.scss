@@ -1,35 +1,122 @@
 #header {
+  position: relative;
+
+  .header_menu_mob {
+    display: none;
+    @media (max-width: 992px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      z-index: 1;
+      transition: .2s ease-in-out;
+      background-color: #ffffff;
+      padding: 15px 0;
+
+      &.active {
+        top: 100%;
+      }
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-item {
+        @media (max-width: 767px) {
+          margin: 5px 0;
+        }
+
+        a {
+          color: #000000;
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: normal;
+          margin: 0 10px;
+        }
+
+        &:hover {
+          a {
+            color: #8e59fe;
+          }
+        }
+      }
+    }
+  }
+
   .header_wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 2;
+
+    .header_logo {
+      display: flex;
+
+      a {
+        display: flex;
+      }
+
+      @media (max-width: 992px) {
+        flex: 1;
+      }
+    }
 
     .header_menu {
-      .menu {
-        display: flex;
+      .header_menu_btn {
+        display: none;
+        @media (max-width: 992px) {
+          display: flex;
+          width: 30px;
+          height: 30px;
+          margin: 0 15px;
 
-        .menu-item {
-          a {
-            color: #000000;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            line-height: normal;
-            margin: 0 15px;
+          svg {
+            fill: #8e59fe;
           }
+        }
+      }
 
-          &:hover {
+      .menu-header-menu-container {
+        @media (max-width: 992px) {
+          display: none;
+        }
+
+        .menu {
+          display: flex;
+
+          .menu-item {
             a {
-              color: #8e59fe;
+              color: #000000;
+              font-family: 'Space Grotesk', sans-serif;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: normal;
+              margin: 0 15px;
+            }
+
+            &:hover {
+              a {
+                color: #8e59fe;
+              }
             }
           }
         }
       }
     }
 
-    #book_demo {
+    .book_demo_btn {
       color: #000000;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 13px;

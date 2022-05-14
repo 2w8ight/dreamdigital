@@ -2,15 +2,20 @@
   .footer_wrap {
     padding-top: 46px;
     padding-bottom: 34px;
+    @media (max-width: 767px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
 
     .footer_top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: 78px;
-
-      img {
-
+      @media (max-width: 992px) {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
       }
 
       .footer_addresses_menu {
@@ -18,9 +23,24 @@
         align-items: flex-start;
         gap: 33px;
         margin-right: 70px;
+        @media (max-width: 992px) {
+          width: 100%;
+          margin-right: 0;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        @media (max-width: 767px) {
+          gap: 20px;
+        }
 
         .footer_address {
           max-width: 157px;
+          @media (max-width: 767px) {
+            max-width: 100%;
+            width: calc(50% - 10px);
+            display: flex;
+            flex-direction: column;
+          }
 
           .item_title {
             color: #000000;
@@ -34,6 +54,12 @@
 
         .footer_menu {
           max-width: 157px;
+          @media (max-width: 767px) {
+            max-width: 100%;
+            width: calc(50% - 10px);
+            display: flex;
+            flex-direction: column;
+          }
 
           .item_title {
             margin-bottom: 20px;
@@ -58,6 +84,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media (max-width: 767px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 10px;
+        align-items: flex-start;
+      }
 
       .footer_info {
         p, a {

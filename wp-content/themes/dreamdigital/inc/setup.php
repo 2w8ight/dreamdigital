@@ -3,10 +3,10 @@ add_action( 'wp_enqueue_scripts', 'wp_enqueue' );
 function wp_enqueue() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_enqueue_style( 'app', get_template_directory_uri() . '/dest/css/app.css' );
-	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/dest/css/swiper-bundle.min.css' );
+//	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/dest/css/swiper-bundle.min.css' );
 	wp_enqueue_script( 'app', get_template_directory_uri() . '/dest/js/app.js', array( 'jquery' ) );
 	wp_localize_script( 'app', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/dest/js/swiper-bundle.min.js', array( 'jquery' ) );
+//	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/dest/js/swiper-bundle.min.js', array( 'jquery' ) );
 }
 
 add_filter( 'upload_mimes', 'upload_allow_types' );

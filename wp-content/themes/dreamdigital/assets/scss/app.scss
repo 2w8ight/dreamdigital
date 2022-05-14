@@ -1,5 +1,4 @@
 // global
-@import "global/variable";
 @import "global/fonts";
 @import "global/base";
 
@@ -7,6 +6,7 @@
 @import "components/header";
 @import "components/footer";
 @import "components/book_demo";
+@import "components/woocommerce";
 
 // pages
 @import "pages/404";

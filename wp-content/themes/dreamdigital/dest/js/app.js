@@ -41,7 +41,7 @@ $(document).ready(function () {
         })
     })
 
-    $('#book_demo').click(function (e) {
+    $('.book_demo_btn').click(function (e) {
         e.preventDefault()
         $('.book_demo').fadeIn(200)
     })
@@ -90,11 +90,7 @@ $(document).ready(function () {
         document.body.removeChild(dummy);
     })
 
-    var window_h = $(window).outerHeight(),
-        header_h = $('header').outerHeight(),
-        footer_h = $('footer').outerHeight()
-    console.log(window_h)
-    console.log(header_h)
-    console.log(footer_h)
-    $('.error-page').css('height', window_h - header_h - footer_h)
+    $('.header_menu_btn').click(function (e) {
+        $('.header_menu_mob').toggleClass('active')
+    })
 });
