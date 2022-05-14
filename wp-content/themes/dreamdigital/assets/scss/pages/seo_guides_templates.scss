@@ -283,12 +283,30 @@
               padding: 30px;
               max-height: 95vh;
               overflow: auto;
+              position: relative;
             }
             @media (max-width: 375px) {
               padding: 20px;
             }
             @media (max-width: 360px) {
               padding: 15px;
+            }
+
+            .hide_p_m_d {
+              display: none;
+              @media (max-width: 767px) {
+                display: flex;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                svg {
+                  width: 30px;
+                  height: 30px;
+                }
+              }
             }
 
             .p_m_d_info {

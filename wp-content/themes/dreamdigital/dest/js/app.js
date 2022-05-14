@@ -56,6 +56,9 @@ $(document).ready(function () {
             $('.book_demo').fadeOut(200)
         }
     });
+    $('.hide_book_demo').click(function (e) {
+        $('.book_demo').fadeOut(200)
+    })
 
     $('.prod_btn_open').click(function (e) {
         e.preventDefault()
@@ -79,6 +82,11 @@ $(document).ready(function () {
             $('.product_more_details').fadeOut(200)
         }
     });
+    document.addEventListener("DOMNodeInserted", function (event) {
+        $('.hide_p_m_d').click(function (e) {
+            $('.product_more_details').fadeOut(200)
+        })
+    }, false);
 
     $('#share_copy').click(function () {
         var dummy = document.createElement('input'),

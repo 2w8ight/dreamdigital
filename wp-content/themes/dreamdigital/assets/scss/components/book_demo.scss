@@ -47,6 +47,24 @@
         }
         @media (max-width: 767px) {
           padding: 30px;
+          position: relative;
+        }
+
+        .hide_book_demo {
+          display: none;
+          @media (max-width: 767px) {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            svg {
+              width: 30px;
+              height: 30px;
+            }
+          }
         }
 
         .pre_title {
