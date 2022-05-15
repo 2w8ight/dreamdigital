@@ -101,6 +101,7 @@ $(document).ready(function () {
     })
 
     $('.header_menu_btn').click(function (e) {
+        $(this).toggleClass('active')
         $('.header_menu_mob').toggleClass('active')
     })
 });
