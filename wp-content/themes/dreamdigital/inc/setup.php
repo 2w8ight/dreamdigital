@@ -9,6 +9,13 @@ function wp_enqueue() {
 //	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/dest/js/swiper-bundle.min.js', array( 'jquery' ) );
 }
 
+add_filter( 'site_transient_update_plugins', 'my_remove_update_nag' );
+function my_remove_update_nag( $value ) {
+	unset( $value->response['advanced-custom-fields-pro/acf.php'] );
+
+	return $value;
+}
+
 add_filter( 'upload_mimes', 'upload_allow_types' );
 function upload_allow_types( $mimes ) {
 	$mimes['svg']  = 'image/svg';
