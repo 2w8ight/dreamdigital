@@ -1,5 +1,11 @@
 #header {
   position: relative;
+  @media (max-width: 767px) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
 
   .header_menu_mob {
     display: none;
