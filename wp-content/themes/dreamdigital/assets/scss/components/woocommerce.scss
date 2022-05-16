@@ -7,12 +7,16 @@ body.woocommerce-page {
     background-color: rgba(142, 89, 254, .06);
 
     .woocommerce {
-      max-width: 1180px;
+      max-width: 1440px;
       width: 100%;
       margin: 0 auto;
       padding: 50px 35px;
       @media (max-width: 767px) {
         padding: 30px 15px;
+      }
+
+      form .form-row-first, form .form-row-last {
+        width: 49%;
       }
 
       #payment #place_order {
@@ -34,6 +38,79 @@ body.woocommerce-page {
       }
 
       .woocommerce-checkout {
+        display: flex;
+        gap: 30px;
+        position: relative;
+        @media (max-width: 992px) {
+          flex-direction: column;
+        }
+
+        .woocommerce-additional-fields {
+          margin-top: 30px;
+          @media (max-width: 992px) {
+            margin-top: 15px;
+          }
+        }
+
+        #payment {
+          background: transparent;
+
+          .payment_methods {
+            border: none;
+
+            .woocommerce-info {
+              line-height: 1.5 !important;
+              background: #ffffff;
+            }
+          }
+        }
+
+        table.shop_table {
+          border: none;
+
+          td, th {
+            border: none;
+          }
+
+          th {
+            font-family: 'Space Grotesk', sans-serif;
+          }
+        }
+
+        #order_review_heading {
+          display: none;
+        }
+
+        #customer_details {
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          background-color: #ffffff;
+          padding: 20px;
+          @media (max-width: 992px) {
+            width: 100%;
+          }
+          @media (max-width: 560px) {
+            background-color: transparent;
+            padding: 0;
+          }
+
+          & > div {
+            width: 100%;
+          }
+        }
+
+        #order_review {
+          width: 40%;
+          position: sticky;
+          right: 0;
+          top: 30px;
+          height: 100%;
+          @media (max-width: 992px) {
+            width: 100%;
+          }
+        }
+
         label {
           color: #000000;
           font-family: 'Space Grotesk', sans-serif;
