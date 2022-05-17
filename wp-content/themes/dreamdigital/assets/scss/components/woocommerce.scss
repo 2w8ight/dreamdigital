@@ -52,6 +52,11 @@ body.woocommerce-page {
           }
         }
 
+        .place-order,
+        .wc_payment_methods {
+          display: none;
+        }
+
         #payment {
           background: transparent;
 
