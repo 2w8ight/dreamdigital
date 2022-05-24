@@ -1,5 +1,74 @@
 var $ = jQuery;
 $(document).ready(function () {
+    var featured_services_swiper = new Swiper(".featured_services_swiper", {
+        slidesPerView         : 3,
+        spaceBetween          : 30,
+        loop                  : true,
+        loopFillGroupWithBlank: true,
+        navigation            : {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints           : {
+            1110: {
+                slidesPerView: 3,
+            },
+            768 : {
+                slidesPerView: 2,
+            },
+            320 : {
+                slidesPerView: 1,
+                spaceBetween : 10,
+            }
+        }
+    });
+
+    var user_reviews_swiper = new Swiper(".user_reviews_swiper", {
+        slidesPerView         : 3,
+        spaceBetween          : 30,
+        loop                  : true,
+        loopFillGroupWithBlank: true,
+        navigation            : {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints           : {
+            1110: {
+                slidesPerView: 3,
+            },
+            768 : {
+                slidesPerView: 2,
+            },
+            320 : {
+                slidesPerView: 1,
+                spaceBetween : 10,
+            }
+        }
+    });
+
+    var user_reviews_swiper = new Swiper(".single_blog_related_swiper", {
+        slidesPerView         : 3,
+        spaceBetween          : 30,
+        loop                  : true,
+        loopFillGroupWithBlank: true,
+        navigation            : {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints           : {
+            1110: {
+                slidesPerView: 3,
+            },
+            768 : {
+                slidesPerView: 2,
+            },
+            320 : {
+                slidesPerView: 1,
+                spaceBetween : 10,
+            }
+        }
+    });
+
     $('.faq .faq_item').click(function () {
         $(this).toggleClass('active')
         $(this).children('.post_content ').slideToggle(200)
@@ -64,7 +133,7 @@ $(document).ready(function () {
         e.preventDefault()
         var prod_id = $(this).data('prod-id'),
             data = {
-                'action': 'get_prod_info',
+                'action' : 'get_prod_info',
                 'prod_id': prod_id
             };
         $.post(myAjax.ajaxurl, data, function (response) {
