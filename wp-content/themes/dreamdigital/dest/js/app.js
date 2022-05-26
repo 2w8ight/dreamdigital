@@ -5,6 +5,7 @@ $(document).ready(function () {
         spaceBetween          : 30,
         loop                  : true,
         loopFillGroupWithBlank: true,
+        // simulateTouch:false,
         navigation            : {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
