@@ -26,7 +26,7 @@ $section_color = get($fields, 'background_color');
                                              alt="product-image">
                                     </div>
                                     <p class="title-22 item_title"><?php echo $product->name; ?></p>
-                                    <p class="text-13 item_desc"><?php echo $product->description; ?></p>
+                                    <p class="text-13 item_desc"><?php echo $product->short_description; ?></p>
                                     <p class="text-18 item_price"><?php echo $product->get_price_html(); ?></p>
                                     <a href="<?php echo home_url('/checkout/?add-to-cart=' . $item) ?>"
                                        class="item_btn"><?php echo $btn_text; ?></a>
@@ -42,7 +42,7 @@ $section_color = get($fields, 'background_color');
                                          alt="product-image">
                                 </div>
                                 <p class="title-22 item_title"><?php echo $product->name; ?></p>
-                                <p class="text-13 item_desc"><?php echo $product->description; ?></p>
+                                <p class="text-13 item_desc"><?php echo $product->short_description; ?></p>
                                 <p class="text-18 item_price"><?php echo $product->get_price_html(); ?></p>
                                 <a href="<?php echo home_url('/checkout/?add-to-cart=' . $products) ?>"
                                    class="item_btn"><?php echo $btn_text; ?></a>
@@ -61,7 +61,7 @@ $section_color = get($fields, 'background_color');
                                              alt="product-image">
                                     </div>
                                     <p class="title-22 item_title"><?php echo $product->name; ?></p>
-                                    <p class="text-13 item_desc"><?php echo $product->description; ?></p>
+                                    <p class="text-13 item_desc"><?php echo $product->short_description; ?></p>
                                     <p class="text-18 item_price"><?php echo $product->get_price_html(); ?></p>
                                     <a class="title-14 item_btn prod_btn_open" data-prod-id="<?php echo $item ?>"><?php echo $btn_text_popup; ?></a>
                                 </div>
@@ -76,7 +76,7 @@ $section_color = get($fields, 'background_color');
                                          alt="product-image">
                                 </div>
                                 <p class="title-22 item_title"><?php echo $product->name; ?></p>
-                                <p class="text-13 item_desc"><?php echo $product->description; ?></p>
+                                <p class="text-13 item_desc"><?php echo $product->short_description; ?></p>
                                 <p class="text-18 item_price"><?php echo $product->get_price_html(); ?></p>
                                 <a class="title-14 item_btn prod_btn_open" data-prod-id="<?php echo $products_popup ?>"><?php echo $btn_text_popup; ?></a>
                             </div>
